@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  {{> header}}
+  <form action="/tasks" method="POST" class="form">
+    <input type="text" name="task" placeholder="Задача" class="form__input">
+    <select name="difficult" class="form__select">
+      <option value="Easy">Легкая</option>
+      <option value="Middle">Средняя</option>
+      <option value="Hard">Сложная</option>
+    </select>
+    <div class="form__wrapper">
+      <input type="checkbox" name="subscribe" value="yes" class="form__checkbox"> 
+      <p>Задача выполнена ?</p> 
+    </div>
+    <input type="submit" value="Отправить" class="form__button">
+  </form>
+  {{> result}}
+</body>
+</html>
